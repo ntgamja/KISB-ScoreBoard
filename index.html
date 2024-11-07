@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KISB Score Board</title>
+    <script src="./index.js" defer></script>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="shortcut  icon" href="./favicon.ico" />
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">
+                <img src="KISB.png" alt="school_logo" class="school_logo" />
+            </div>
+            <div class="title">
+                <div class="titlebox">
+                    <input type="text" class="gamename" placeholder="경기 이름">
+                </div>
+                
+            </div>
+            <div class="menu">
+                <button class="menubtn" id="menubtn">
+                    <img src="./hamburger.png" class="hamburger" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="main">
+            <div class="left">
+                <div class="teamnamebox">
+                    <input class="team" id="leftname" placeholder="팀명 입력"/>
+                </div>
+                <div class="scorebox">
+                    <div class="score" id="lscore">0</div>
+                </div>
+            </div>
+            <div class="center">
+                <div class="statusbox">
+                    <input type="text" placeholder="진행 상황" class="status">
+                </div>
+                <div class="clock">
+                    <div class="time" id="time">00:00</div>
+                    <div class="pause" id="pause">PAUSE</div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="teamnamebox">
+                    <input class="team" id="rightname" placeholder="팀명 입력"/>
+                </div>
+                <div class="scorebox">
+                    <div class="score" id="rscore">0</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal part -->
+    <div id="modalWrap">
+        <div id="modalBody">
+          <div id="closeBtn">&times;</div>
+          <div class="btns">
+            <div class="upp">
+                <btn id="settingbtn">
+                    <img src="./setting.png" alt="" class="btnimg">
+                    <p>Setting</p>
+                </btn>
+                <btn id="resetbtn">
+                    <img src="./reset.png" alt="" class="btnimg">
+                    <p>Reset</p>
+                </btn>
+            </div>
+            <div class="downn">
+                <btn id="switchbtn">
+                    <img src="./reverse.png" alt="" class="btnimg">
+                    <p>Switch</p>
+                </btn>
+                <btn id="helpbtn">
+                    <img src="./help.png" alt="" class="btnimg">
+                    <p>Help</p>
+                </btn>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- setting modal -->
+       <div id="settingModalWrap">
+            <div id="settingModalBody">
+                <div id="settingModalCloseBtn">&times;</div>
+                <span>시간을 입력하세요.</span>
+                <div class="timeinput">
+                    <input type="number" placeholder="min" id="minInput">
+                    <input type="number" placeholder="sec" id="secInput">
+                    
+                </div>
+                <button id="submit">SUBMIT</button>
+            </div>
+       </div>
+
+    <!-- help modal -->
+    <div id="helpModalWrap">
+        <div id="helpModalBody">
+            <div id="helpModalCloseBtn">&times;</div>
+            <img src="./Manual.png" alt="">
+            <span>By 박상률, 나현채
+                <br>
+                KISB Score Board ver2.0 
+                (2024.11.08)
+            </span>
+        </div>
+   </div>
+</body>
+</html>
